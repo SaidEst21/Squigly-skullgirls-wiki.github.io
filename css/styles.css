@@ -1,0 +1,283 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    transition: all 0.3s ease-in;
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background-color: #222;
+}
+
+.header {
+    
+    background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(https://4.bp.blogspot.com/-dIT8zwXpHVc/VvFx4_aztGI/AAAAAAAAGes/MhNSrsaNmBoVLhqC51MQzGmZf9P-t4r1Q/s1600/Skullgirls-Banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    width: 100%;
+    box-shadow: 5px 0px 20px #000;
+}
+
+#title {
+
+    text-align: center;
+    margin: 0;
+    padding: 50px 0;
+    font-family: 'Lemon', serif;
+}
+
+.main h2 {
+
+    text-align: center;
+    padding: 5px 0;
+}
+
+.main p, .main > b {
+
+        padding: 10px 20px;
+}
+
+.main div {
+
+    display: block;
+    text-align: center;
+}
+
+.Squigly_img {
+
+    object-fit: cover;
+    height: 400px;
+}
+
+.Squigly_icon {
+
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+table {
+
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto;
+}
+
+th, td {
+
+    border: solid 2px rgb(248, 74, 10);
+    padding: 5px;
+}
+
+td h3 {
+
+    text-align: center;
+}
+
+.sumary {
+
+    width: 300px;
+    border-top: solid 3px rgb(248, 74, 10);
+    border-bottom: solid 3px rgb(248, 74, 10);
+    border-radius: 10px;
+    margin: 10px auto;
+    background-color: #282828;
+}
+
+.sumary th, .sumary td {
+
+    border: solid 1px rgba(248, 74, 10, 0.5);
+}
+
+ul {
+
+    list-style: none;
+}
+
+a {
+
+    color: #fca;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+a:hover {
+
+    color: rgb(255, 173, 119);
+    text-decoration: underline;
+}
+
+.theme {
+
+    border-top: solid 1px rgba(248, 74, 10, 0.5);
+    margin: 0 10px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.sub-theme {
+
+    margin: 0 10px;
+}
+
+.curiosities__ul {
+
+    padding: 0 20px;
+    list-style: disc;
+}
+
+.curiosities-ul__li {
+
+    padding: 10px;
+}
+
+.aside {
+
+    margin: 10px;
+    padding: 10px;
+}
+
+.aside > div {
+
+    border-top: solid 2px rgba(255, 68, 0, 0.8);
+    border-radius: 7px;
+}
+
+.aside__article {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.aside > div > b {
+
+    display: inline-block;
+    padding: 10px;
+}
+
+.aside__article a {
+
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.aside__article img {
+
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+    border-radius: 5px
+}
+
+.aside__article b, .aside__article p {
+
+    position: relative;
+    top: -45px;
+    left: 5px;
+    color: rgb(255, 102, 0);
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.aside__article a:hover > img {
+
+    filter: blur(0);
+}
+
+.footer {
+
+    border-top: solid 2px rgba(255, 68, 0, 0.8);
+}
+
+.footer ul {
+
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+@media screen and (min-width: 1000px) {
+
+    .grid-container {
+
+        display: grid;
+        grid-template-columns: repeat(3, minmax(min-content, max-content));
+        grid-template-rows: repeat(3, minmax(min-content, max-content));
+    }
+
+    .header {
+
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .main {
+
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .aside {
+
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        width: 35vw;
+        max-width: 550px;
+    }
+
+    .aside > div {
+
+        position: sticky;
+        border-bottom: solid 2px rgba(255, 68, 0, 0.8);
+        top: 10px;
+    }
+    
+    .aside__article {
+
+        height: 90vh;
+        overflow-y: scroll;
+    }
+
+    .aside__article::-webkit-scrollbar {
+
+        width: 5px;
+    }
+
+    .aside__article::-webkit-scrollbar-thumb {
+
+        background-color:rgba(255, 51, 0, 0.637);
+        border-radius: 10px;
+        top: 3px
+    }
+
+    .aside__article a {
+
+        margin: 20px 0;
+    }
+
+    .aside__article img {
+
+        filter: blur(1px);
+    }
+
+    .footer {
+
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+    }
+
+    #title {
+
+        text-align: left;
+        padding: 70px;
+    }
+}
